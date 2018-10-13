@@ -1,4 +1,4 @@
-package com.example.helloworld.chatapp.fragments
+package com.example.helloworld.chatapp.Auth
 
 
 import android.content.Intent
@@ -14,7 +14,7 @@ import android.widget.ProgressBar
 import android.widget.Toast
 
 import com.example.helloworld.chatapp.R
-import com.example.helloworld.chatapp.activities.HomeActivity
+import com.example.helloworld.chatapp.Home.HomeActivity
 import com.example.helloworld.chatapp.utils.NetworkUtils
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
@@ -121,8 +121,10 @@ class OtpFragment : Fragment() {
 
                         } else {
 
+
+
                             mDatabaseReference.child(phoneNumber).setValue(mFirebaseauth.currentUser!!.uid)
-                            val intent = Intent(activity, HomeActivity::class.java)
+                            val intent = Intent(activity, DataCollectionActiviy::class.java)
                             startActivity(intent)
                         }
                     }

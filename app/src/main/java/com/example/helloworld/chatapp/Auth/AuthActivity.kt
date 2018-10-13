@@ -1,4 +1,4 @@
-package com.example.helloworld.chatapp.activities
+package com.example.helloworld.chatapp.Auth
 
 
 import android.support.v7.app.AppCompatActivity
@@ -7,9 +7,6 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentTransaction
 import android.text.TextUtils
 import com.example.helloworld.chatapp.R
-import com.example.helloworld.chatapp.fragments.OtpFragment
-import com.example.helloworld.chatapp.fragments.PhoneFragment
-import kotlinx.android.synthetic.main.activity_auth.*
 
 class AuthActivity : AppCompatActivity() {
 
