@@ -13,37 +13,32 @@ import kotlinx.android.synthetic.main.activity_auth.*
 
 class AuthActivity : AppCompatActivity() {
 
-    var CURRENT_FRAGMENT : String = " "
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_auth)
 
         if (savedInstanceState == null) {
-            showFragment(PhoneFragment.instantiate());
+            showFragment(PhoneFragment.instantiate())
         }
 
-        button.setOnClickListener {
+    }
 
-            if (!CURRENT_FRAGMENT.equals(OtpFragment.TAG)) {
-                showFragment(OtpFragment.instantiate(), OtpFragment.TAG);
-                CURRENT_FRAGMENT = OtpFragment.TAG;
+  // companion object {
+
+        fun  showFragment(  fragment  : Fragment) {
+            showFragment(fragment, "")
+        }
+
+        fun  showFragment( fragment  : Fragment,  tag : String) {
+            val transaction : FragmentTransaction = supportFragmentManager.beginTransaction()
+
+            transaction.replace(R.id.frame_auth, fragment)
+            if (!TextUtils.isEmpty(tag)) {
+                transaction.addToBackStack(tag)
             }
 
-        }
-    }
-
-    private fun  showFragment(  fragment  : Fragment) {
-        showFragment(fragment, "");
-    }
-    private fun  showFragment( fragment  : Fragment,  tag : String) {
-         var transaction : FragmentTransaction = getSupportFragmentManager().beginTransaction();
-
-        transaction.replace(R.id.frame_auth, fragment);
-        if (!TextUtils.isEmpty(tag)) {
-            transaction.addToBackStack(tag);
+            transaction.commit()
         }
 
-        transaction.commit();
-    }
 }
 
