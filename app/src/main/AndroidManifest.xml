@@ -18,10 +18,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-
         </activity>
         <activity android:name=".Auth.DataCollectionActiviy">
-
+        </activity>
+        <activity android:name=".Home.UserChatActivity"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
     </application>
 
