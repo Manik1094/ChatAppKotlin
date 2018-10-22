@@ -52,7 +52,8 @@ class DataCollectionActiviy : AppCompatActivity() {
 
             var users = User(name_edittext.text.toString() ,
                              status_edittext.text.toString() ,
-                             convertProfileAvatarToBase64())
+                             convertProfileAvatarToBase64(),
+                             FirebaseAuth.getInstance().uid!! )
 
             mDatabaseReference.child(FirebaseAuth.getInstance().currentUser!!.uid).addValueEventListener( object : ValueEventListener{
                 override fun onCancelled(p0: DatabaseError) {
