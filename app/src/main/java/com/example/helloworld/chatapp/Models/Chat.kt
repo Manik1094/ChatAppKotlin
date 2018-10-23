@@ -14,5 +14,7 @@ class Chat(from : String, time : String, type : String, message : String) {
         this.message = message
     }
 
+    constructor() : this(""  , "" , "", "")
+
 
 }

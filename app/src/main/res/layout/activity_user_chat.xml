@@ -6,42 +6,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <com.github.rongi.rotate_layout.layout.RotateLayout
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/rotateLayout"
-            android:layout_width="65dp"
-            android:layout_height="match_parent"
-            android:background="@color/colorAccent"
-            app:angle="90"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">    <!-- Specify rotate angle here -->
 
 
-    </com.github.rongi.rotate_layout.layout.RotateLayout>
-
-
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="236dp"
-            android:layout_marginTop="136dp"
-            android:rotation="90"
-            android:text="Mohak Gupta"
-            android:textColor="@android:color/black"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" android:layout_marginLeft="236dp"/>
-
-    <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="60dp"
-            android:src="@drawable/profile_avatar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginRight="8dp"/>
 
     <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerView"
@@ -60,7 +26,7 @@
 
     <EditText
             android:id="@+id/edt_message"
-            android:layout_width="250dp"
+            android:layout_width="310dp"
             android:layout_height="40dp"
             android:layout_marginBottom="16dp"
             android:layout_marginEnd="8dp"
